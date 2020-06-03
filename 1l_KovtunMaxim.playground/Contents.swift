@@ -32,7 +32,7 @@
     print("x\u{2081} = x\u{2082} = −b\u{2044}2a")
     
     let x = -b / (2 * a)
-    
+     
     print("x = -" + String(b) + "\u{2044}(2 * " + String(a) + ") = " + String(x))
     print("Ответ: x = " + String(x))
     
