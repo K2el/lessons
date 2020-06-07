@@ -82,8 +82,8 @@ func primeHundred(primeCount: Int) -> [Int] {
     var num: Int = arr.last! + 1
     var prime: Bool = true
     while arr.count != primeCount {
-        for index in stride(from: arr.count - 1, through: 0, by: -1) {
-            if num % arr[index]  == 0 {
+        for index in arr {
+            if num % index  == 0 {
                 prime = false
             }
         }
