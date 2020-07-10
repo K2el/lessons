@@ -96,29 +96,6 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func pswdInputEditingDidBegin(_ sender: Any) {
-        if pswdInput.text == "Пароль" {
-            pswdInput.text = ""
-        }
-    }
-    
-    @IBAction func pswdInputEditingDidEnd(_ sender: Any) {
-        if pswdInput.text == "" {
-                   pswdInput.text = "Пароль"
-               }
-    }
-    
-    @IBAction func loginInputEditingDidBegin(_ sender: Any) {
-        if loginInput.text == "Логин" {
-            loginInput.text = ""
-        }
-    }
-    
-    @IBAction func loginInputEditingDidEnd(_ sender: Any) {
-        if loginInput.text == "" {
-            loginInput.text = "Логин"
-        }
-    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
