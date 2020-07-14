@@ -19,6 +19,8 @@
 		957CB1BA24B764950094394E /* GlobalGroupsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1B924B764950094394E /* GlobalGroupsCellView.swift */; };
 		957CB1BC24B86DD10094394E /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */; };
 		957CB1BE24B86FEA0094394E /* MyFriendsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1BD24B86FEA0094394E /* MyFriendsCellView.swift */; };
+		95A893EE24BB0CD5007F8F41 /* TestImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A893ED24BB0CD5007F8F41 /* TestImageView.swift */; };
+		95A893F024BC54E4007F8F41 /* LikePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A893EF24BC54E4007F8F41 /* LikePhoto.swift */; };
 		95CC781524B70A700053EA1C /* MyGroupsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC781424B70A700053EA1C /* MyGroupsCellView.swift */; };
 		95CC781724B70FEC0053EA1C /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC781624B70FEC0053EA1C /* MyGroupsViewController.swift */; };
 		95D7676E24B876A1002EBA09 /* FriendsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7676D24B876A1002EBA09 /* FriendsPhotoViewController.swift */; };
@@ -63,6 +65,8 @@
 		957CB1B924B764950094394E /* GlobalGroupsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsCellView.swift; sourceTree = "<group>"; };
 		957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
 		957CB1BD24B86FEA0094394E /* MyFriendsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCellView.swift; sourceTree = "<group>"; };
+		95A893ED24BB0CD5007F8F41 /* TestImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageView.swift; sourceTree = "<group>"; };
+		95A893EF24BC54E4007F8F41 /* LikePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePhoto.swift; sourceTree = "<group>"; };
 		95CC781424B70A700053EA1C /* MyGroupsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsCellView.swift; sourceTree = "<group>"; };
 		95CC781624B70FEC0053EA1C /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
 		95D7676D24B876A1002EBA09 /* FriendsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */,
 				952AA7B424ADE5C500C09F83 /* LoginViewController.swift */,
 				952AA7B624ADE5C500C09F83 /* Main.storyboard */,
+				95A893EF24BC54E4007F8F41 /* LikePhoto.swift */,
+				95A893ED24BB0CD5007F8F41 /* TestImageView.swift */,
 				952AA7B924ADE5C600C09F83 /* Assets.xcassets */,
 				952AA7BB24ADE5C600C09F83 /* LaunchScreen.storyboard */,
 				952AA7BE24ADE5C600C09F83 /* Info.plist */,
@@ -319,8 +325,10 @@
 				95D7677024B876C2002EBA09 /* FriendsPhotoCellView.swift in Sources */,
 				952AA7B124ADE5C500C09F83 /* AppDelegate.swift in Sources */,
 				95CC781524B70A700053EA1C /* MyGroupsCellView.swift in Sources */,
+				95A893EE24BB0CD5007F8F41 /* TestImageView.swift in Sources */,
 				95D7677524B881F4002EBA09 /* Group.swift in Sources */,
 				952AA7B324ADE5C500C09F83 /* SceneDelegate.swift in Sources */,
+				95A893F024BC54E4007F8F41 /* LikePhoto.swift in Sources */,
 				95CC781724B70FEC0053EA1C /* MyGroupsViewController.swift in Sources */,
 				95D7677324B88022002EBA09 /* User.swift in Sources */,
 				957CB1BE24B86FEA0094394E /* MyFriendsCellView.swift in Sources */,

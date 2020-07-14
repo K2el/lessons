@@ -11,6 +11,7 @@ import UIKit
 class MyFriendsCellView: UITableViewCell {
     
     
+    @IBOutlet weak var testImageView: TestImageView!
     @IBOutlet weak var friendImage: UIImageView!
     @IBOutlet weak var friendName: UILabel!
     

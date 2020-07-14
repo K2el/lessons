@@ -27,6 +27,7 @@ class GlobalGroupsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GlobalGroupsCell", for: indexPath) as! GlobalGroupsCellView
         cell.groupTextName.text = groups[indexPath.row].name
         cell.groupImage.image = groups[indexPath.row].image
+        cell.testImageView.configure()
         return cell
     }
     

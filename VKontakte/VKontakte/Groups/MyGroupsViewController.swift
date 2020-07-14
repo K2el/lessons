@@ -27,6 +27,7 @@ class MyGroupsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! MyGroupsCellView
         cell.groupTextName.text = myGroups[indexPath.row].name
         cell.groupImage.image = myGroups[indexPath.row].image
+        cell.testImageView.configure()
         return cell
     }
     

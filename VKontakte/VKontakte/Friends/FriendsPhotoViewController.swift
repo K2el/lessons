@@ -13,7 +13,9 @@ class FriendsPhotoViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("id пользователя: \(row)")
     }
+    
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
             return 1
@@ -39,4 +41,5 @@ class FriendsPhotoViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         
         }
+    
 }

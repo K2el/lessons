@@ -15,6 +15,8 @@ class MyGroupsCellView: UITableViewCell {
     @IBOutlet weak var groupImage: UIImageView!
     @IBOutlet weak var groupTextName: UILabel!
     
+    @IBOutlet weak var testImageView: TestImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

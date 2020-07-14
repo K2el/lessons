@@ -14,7 +14,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var authButton: UIButton!
     
-
     // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
         // Получаем размер клавиатуры
@@ -84,6 +83,7 @@ class LoginViewController: UIViewController {
         scrollView.addGestureRecognizer(hideKeyboardGesture)
         
         authButton.backgroundColor = .blue
+        
     }
     
     

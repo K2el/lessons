@@ -11,6 +11,7 @@ import UIKit
 class GlobalGroupsCellView: UITableViewCell {
         
     
+    @IBOutlet weak var testImageView: TestImageView!
     @IBOutlet weak var groupImage: UIImageView!
     @IBOutlet weak var groupTextName: UILabel!
     

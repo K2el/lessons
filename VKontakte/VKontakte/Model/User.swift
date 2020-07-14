@@ -13,7 +13,7 @@ class User {
     let image: UIImage?
     let id: Int? = nil
     var groupsId: [Int] = []
-    var photos: [UIImage?] = []
+    var photo: [UIImage?] = []
     var friendsId: [Int] = []
     init(_ name: String, _ image: UIImage?) {
         self.name = name
@@ -21,14 +21,42 @@ class User {
     }
 }
 
-//var user1 = User("Имя 1", UIImage(named: "darkfit"), photos = [UIImage(named: "darkfit"), UIImage(named: "darkfit")])
+class User2 {
+    let name: String
+    let image: UIImage?
+    var id: Int? = nil
+    var groupsId: [Int] = []
+    var photo: [UIImage?] = []
+    var friendsId: [Int] = []
+    init(_ name: String, _ image: UIImage?, photo: [UIImage?], id: Int) {
+        self.name = name
+        self.image = image
+        self.photo = photo
+        self.id = id
+    }
+}
+
+//идентификатор пользователя
+var row: Int = 0
+
+var user1 = User2("Name2", UIImage(named: "darkfit"), photo: [UIImage(named: "darkfit"), UIImage(named: "darkfit")], id: 1)
+var user2 = User2("Name2", UIImage(named: "darkfit"), photo: [UIImage(named: "darkfit"), UIImage(named: "darkfit"), UIImage(named: "darkfit")], id: 2)
+var user3 = User2("Name3", UIImage(named: "darkfit"), photo: [UIImage(named: "darkfit"), UIImage(named: "darkfit"), UIImage(named: "darkfit"), UIImage(named: "darkfit")], id: 3)
+var user4 = User2("Name4", UIImage(named: "darkfit"), photo: [UIImage(named: "darkfit")], id: 4)
+
+var myFriends2: [User2] = [
+    user1,
+    user2,
+    user3,
+    user4
+]
 
 
 var myFriends: [User] = [
-    User("Имя друга 1", UIImage(named: "darkfit")),
-    User("Имя друга 2", UIImage(named: "darkfit")),
-    User("Имя друга 3", UIImage(named: "darkfit")),
-    User("Имя друга 4", UIImage(named: "darkfit"))
+    User("Вася", UIImage(named: "darkfit")),
+    User("Петя", UIImage(named: "darkfit")),
+    User("Юля", UIImage(named: "darkfit")),
+    User("Виктор", UIImage(named: "darkfit"))
 ]
 
 var friendsPhoto: [UIImage?] = [
