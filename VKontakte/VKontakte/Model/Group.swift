@@ -18,10 +18,10 @@ struct Group {
 }
 
 var groups: [Group] = [
-    Group("Глобальная группа 1", UIImage(named: "darkfit")),
-    Group("Глобальная группа 2", UIImage(named: "darkfit")),
-    Group("Глобальная группа 3", UIImage(named: "darkfit")),
-    Group("Глобальная группа 4", UIImage(named: "darkfit"))
+    Group("Супер группа", UIImage(named: "darkfit")),
+    Group("Супер пупер группа", UIImage(named: "darkfit")),
+    Group("Еще одна группа", UIImage(named: "darkfit")),
+    Group("Группа 4", UIImage(named: "darkfit"))
 ]
 
 var myGroups: [Group] = [

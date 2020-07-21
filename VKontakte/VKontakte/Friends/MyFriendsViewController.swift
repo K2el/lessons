@@ -10,17 +10,20 @@ import UIKit
 
 
 
-class MyFriendsViewController: UITableViewController {
+class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
     
     var sections: [String] = []
     var newMyFriends: [[User]] = []
     
+    var filtered: [User] = []
 
     
-    private func sectionChar() {
+    private func sectionChar(_ users: [User]) {
         var char: String
+        newMyFriends = []
+        sections = []
         
-        for user in myFriends {
+        for user in users {
             char = String(user.name.first!)
             if (sections.firstIndex(of: char) == nil) {
                 sections.append(char)
@@ -29,13 +32,40 @@ class MyFriendsViewController: UITableViewController {
                 newMyFriends[sections.firstIndex(of: char)!].append(user)
             }
         }
-        print(newMyFriends)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sectionChar()
+        sectionChar(myFriends)
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        searchBar.delegate = self
+        self.tableView.tableHeaderView = searchBar
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText != "" {
+            filtered = myFriends.filter({ (text) -> Bool in
+                let tmp:NSString = text.name as NSString
+                let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            //print(filtered)
+
+            sectionChar(filtered)
+            
+        } else {
+            sectionChar(myFriends)
+        }
+        
+        self.tableView.reloadData()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -62,6 +92,7 @@ class MyFriendsViewController: UITableViewController {
             //print("нажата строка № \(indexPath.row) в секции \(indexPath.section)")
             row = indexPath.row
         }
+
     
 
 }

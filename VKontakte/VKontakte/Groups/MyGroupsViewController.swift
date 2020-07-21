@@ -9,10 +9,37 @@
 import UIKit
 
 
-class MyGroupsViewController: UITableViewController {
+class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
+    
+    var filtered: [Group] = myGroups
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText != "" {
+            filtered = myGroups.filter({ (text) -> Bool in
+                let tmp:NSString = text.name as NSString
+                let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+                return range.location != NSNotFound
+            })
+            //print(filtered)
+            
+        } else {
+            filtered = myGroups
+        }
+        
+        self.tableView.reloadData()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        searchBar.delegate = self
+        self.tableView.tableHeaderView = searchBar
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -20,13 +47,13 @@ class MyGroupsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myGroups.count
+        return filtered.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! MyGroupsCellView
-        cell.groupTextName.text = myGroups[indexPath.row].name
-        cell.groupImage.image = myGroups[indexPath.row].image
+        cell.groupTextName.text = filtered[indexPath.row].name
+        cell.groupImage.image = filtered[indexPath.row].image
         cell.testImageView.configure()
         return cell
     }
@@ -38,7 +65,7 @@ class MyGroupsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         // Если была нажата кнопка «Удалить»
         if editingStyle == .delete {
-            myGroups.remove(at: indexPath.row)
+            filtered.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -63,7 +90,7 @@ class MyGroupsViewController: UITableViewController {
     
     private func addMyGroup(name: String) {
         guard !name.isEmpty else { return }
-        myGroups.insert(Group(name, nil), at: 0)
+        filtered.insert(Group(name, nil), at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         
     }

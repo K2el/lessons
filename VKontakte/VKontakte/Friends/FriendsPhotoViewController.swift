@@ -42,4 +42,5 @@ class FriendsPhotoViewController: UICollectionViewController {
         
         }
     
+    
 }

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UITableViewCell"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NewsCell" customModule="VKontakte" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZg-IM-CYp">
+                    <rect key="frame" x="22" y="54" width="356" height="556"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иванов Иван Иваныч" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf8-Az-og6">
+                            <rect key="frame" x="80" y="20" width="169.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29.02.2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nsc-JZ-y2Y">
+                            <rect key="frame" x="80" y="49" width="88.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaf-2X-L0E" customClass="TestImageView" customModule="VKontakte" customModuleProvider="target">
+                            <rect key="frame" x="20" y="20" width="50" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="darkfit" translatesAutoresizingMaskIntoConstraints="NO" id="ibI-BR-r8P">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="W6q-qF-gdL"/>
+                                <constraint firstAttribute="width" secondItem="gaf-2X-L0E" secondAttribute="height" multiplier="1:1" id="rC4-l4-lpc"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                    <real key="value" value="25"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                    <size key="value" width="0.0" height="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iew-a3-wYw">
+                            <rect key="frame" x="0.0" y="131" width="356" height="356"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkfit" translatesAutoresizingMaskIntoConstraints="NO" id="7vs-5i-9uA">
+                                    <rect key="frame" x="0.0" y="0.0" width="356" height="356"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="7vs-5i-9uA" firstAttribute="width" secondItem="Iew-a3-wYw" secondAttribute="width" id="Csa-Fo-bX8"/>
+                                <constraint firstItem="7vs-5i-9uA" firstAttribute="height" secondItem="Iew-a3-wYw" secondAttribute="height" id="NYe-nj-HRN"/>
+                                <constraint firstItem="7vs-5i-9uA" firstAttribute="centerY" secondItem="Iew-a3-wYw" secondAttribute="centerY" id="cBl-0w-A0J"/>
+                                <constraint firstAttribute="width" secondItem="Iew-a3-wYw" secondAttribute="height" multiplier="1:1" id="hXY-oq-KvL"/>
+                                <constraint firstItem="7vs-5i-9uA" firstAttribute="centerX" secondItem="Iew-a3-wYw" secondAttribute="centerX" id="yoN-YY-7gK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnO-Np-pTO" customClass="LikePhoto" customModule="VKontakte" customModuleProvider="target">
+                            <rect key="frame" x="316" y="467" width="40" height="20"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cnO-Np-pTO" secondAttribute="height" multiplier="2:1" id="Tb8-RB-Sg6"/>
+                                <constraint firstAttribute="width" constant="40" id="v8A-ZX-Ajk"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hj3-SJ-2Ha">
+                            <rect key="frame" x="121" y="90" width="114" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Iew-a3-wYw" firstAttribute="width" secondItem="wZg-IM-CYp" secondAttribute="width" id="7r2-BG-sfo"/>
+                        <constraint firstItem="Nsc-JZ-y2Y" firstAttribute="bottom" secondItem="gaf-2X-L0E" secondAttribute="bottom" id="9cs-Jd-XP2"/>
+                        <constraint firstItem="cnO-Np-pTO" firstAttribute="bottom" secondItem="Iew-a3-wYw" secondAttribute="bottom" id="DqB-Lj-j0R"/>
+                        <constraint firstItem="Hj3-SJ-2Ha" firstAttribute="centerX" secondItem="wZg-IM-CYp" secondAttribute="centerX" id="Ifm-zb-UYu"/>
+                        <constraint firstItem="cnO-Np-pTO" firstAttribute="trailing" secondItem="Iew-a3-wYw" secondAttribute="trailing" id="LhW-eS-6ss"/>
+                        <constraint firstItem="Kf8-Az-og6" firstAttribute="leading" secondItem="gaf-2X-L0E" secondAttribute="trailing" constant="10" id="R6W-Op-iEd"/>
+                        <constraint firstItem="gaf-2X-L0E" firstAttribute="top" secondItem="wZg-IM-CYp" secondAttribute="top" constant="20" id="S1E-1E-vRp"/>
+                        <constraint firstItem="Kf8-Az-og6" firstAttribute="top" secondItem="gaf-2X-L0E" secondAttribute="top" id="UZg-He-qMv"/>
+                        <constraint firstItem="gaf-2X-L0E" firstAttribute="leading" secondItem="wZg-IM-CYp" secondAttribute="leading" constant="20" id="We2-g2-he8"/>
+                        <constraint firstItem="Iew-a3-wYw" firstAttribute="centerX" secondItem="wZg-IM-CYp" secondAttribute="centerX" id="c50-A4-pjv"/>
+                        <constraint firstItem="Nsc-JZ-y2Y" firstAttribute="leading" secondItem="Kf8-Az-og6" secondAttribute="leading" id="cII-dN-iqq"/>
+                        <constraint firstItem="Hj3-SJ-2Ha" firstAttribute="top" secondItem="Nsc-JZ-y2Y" secondAttribute="bottom" constant="20" id="h5F-hw-ayP"/>
+                        <constraint firstItem="Iew-a3-wYw" firstAttribute="top" secondItem="Hj3-SJ-2Ha" secondAttribute="bottom" constant="20" id="l5v-X9-GlC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="NewsCell"/>
+            <constraints>
+                <constraint firstItem="wZg-IM-CYp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="UB9-xf-har"/>
+                <constraint firstItem="wZg-IM-CYp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="eiW-za-Tge"/>
+                <constraint firstItem="wZg-IM-CYp" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" id="j1K-gA-skZ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="avatar" destination="ibI-BR-r8P" id="tXC-eg-5Q5"/>
+                <outlet property="date" destination="Nsc-JZ-y2Y" id="abf-LY-cbe"/>
+                <outlet property="imageShadow" destination="gaf-2X-L0E" id="dVs-Kf-a05"/>
+                <outlet property="name" destination="Kf8-Az-og6" id="QBt-ha-W4q"/>
+                <outlet property="newsImage" destination="7vs-5i-9uA" id="x7z-yh-gwX"/>
+            </connections>
+            <point key="canvasLocation" x="-46.376811594202906" y="65.625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="darkfit" width="356" height="356"/>
+    </resources>
+</document>
