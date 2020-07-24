@@ -53,12 +53,48 @@
                                             </segue>
                                         </connections>
                                     </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CL-ZA-xSo">
+                                        <rect key="frame" x="107" y="428.5" width="200" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDd-GA-di4">
+                                                <rect key="frame" x="95.5" y="29.5" width="9.5" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VL5-v8-hDr">
+                                                <rect key="frame" x="81" y="29.5" width="9.5" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEQ-RD-zR0">
+                                                <rect key="frame" x="110" y="29.5" width="9.5" height="41"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="DDd-GA-di4" firstAttribute="centerX" secondItem="8CL-ZA-xSo" secondAttribute="centerX" id="21w-Y3-J2e"/>
+                                            <constraint firstAttribute="width" secondItem="8CL-ZA-xSo" secondAttribute="height" multiplier="2:1" id="6MG-e9-frd"/>
+                                            <constraint firstItem="qEQ-RD-zR0" firstAttribute="centerY" secondItem="DDd-GA-di4" secondAttribute="centerY" id="JD4-rV-tpK"/>
+                                            <constraint firstItem="DDd-GA-di4" firstAttribute="leading" secondItem="VL5-v8-hDr" secondAttribute="trailing" constant="5" id="U2S-6d-hg6"/>
+                                            <constraint firstItem="qEQ-RD-zR0" firstAttribute="leading" secondItem="DDd-GA-di4" secondAttribute="trailing" constant="5" id="X5q-wE-Epm"/>
+                                            <constraint firstAttribute="width" constant="200" id="cgh-vu-Bag"/>
+                                            <constraint firstItem="DDd-GA-di4" firstAttribute="centerY" secondItem="8CL-ZA-xSo" secondAttribute="centerY" id="fSu-Ys-Heh"/>
+                                            <constraint firstItem="VL5-v8-hDr" firstAttribute="centerY" secondItem="DDd-GA-di4" secondAttribute="centerY" id="yXC-rS-vGb"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Jw3-bg-a9v" firstAttribute="width" secondItem="plJ-6t-LFT" secondAttribute="width" id="Bz3-c5-SdD"/>
                                     <constraint firstAttribute="trailing" secondItem="6af-un-Rsy" secondAttribute="trailing" constant="112" id="DBf-Qg-Kc3"/>
                                     <constraint firstItem="6af-un-Rsy" firstAttribute="top" secondItem="VcZ-ls-gEN" secondAttribute="top" constant="62" id="Lia-2O-lk9"/>
+                                    <constraint firstItem="8CL-ZA-xSo" firstAttribute="top" secondItem="Jw3-bg-a9v" secondAttribute="bottom" constant="200" id="Pdn-Ky-MVC"/>
                                     <constraint firstItem="Jw3-bg-a9v" firstAttribute="centerX" secondItem="VcZ-ls-gEN" secondAttribute="centerX" id="QOn-2T-prh"/>
+                                    <constraint firstItem="8CL-ZA-xSo" firstAttribute="centerX" secondItem="VcZ-ls-gEN" secondAttribute="centerX" id="XLv-ez-gDe"/>
                                     <constraint firstItem="a5c-ob-95A" firstAttribute="centerX" secondItem="VcZ-ls-gEN" secondAttribute="centerX" id="YNV-Jb-2SX"/>
                                     <constraint firstAttribute="bottom" secondItem="a5c-ob-95A" secondAttribute="bottom" constant="300" id="aQd-mf-Gce"/>
                                     <constraint firstItem="plJ-6t-LFT" firstAttribute="centerX" secondItem="VcZ-ls-gEN" secondAttribute="centerX" id="dZp-XV-Hcu"/>
@@ -83,9 +119,13 @@
                     <navigationItem key="navigationItem" title="Авторизация" id="E5X-nT-3is"/>
                     <connections>
                         <outlet property="authButton" destination="a5c-ob-95A" id="c97-ab-j28"/>
+                        <outlet property="firstLoadText" destination="VL5-v8-hDr" id="klA-BU-6Aj"/>
+                        <outlet property="lastLoadText" destination="qEQ-RD-zR0" id="WCI-vU-dLW"/>
+                        <outlet property="loadTextView" destination="8CL-ZA-xSo" id="K24-0y-jms"/>
                         <outlet property="loginInput" destination="plJ-6t-LFT" id="dkb-H4-rzP"/>
                         <outlet property="pswdInput" destination="Jw3-bg-a9v" id="40G-3B-B7f"/>
                         <outlet property="scrollView" destination="VcZ-ls-gEN" id="jgC-uu-SCe"/>
+                        <outlet property="secondLoadText" destination="DDd-GA-di4" id="37Y-nl-TWX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -485,7 +525,7 @@
         <scene sceneID="H4T-fa-Ufp">
             <objects>
                 <tableViewController id="ZFC-9G-lbk" customClass="NewsViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="500" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jde-vF-Yig">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="530" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jde-vF-Yig">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

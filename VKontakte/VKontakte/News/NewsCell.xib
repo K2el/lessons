@@ -14,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZg-IM-CYp">
-                    <rect key="frame" x="22" y="54" width="356" height="556"/>
+                    <rect key="frame" x="0.0" y="54" width="400" height="556"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Иванов Иван Иваныч" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf8-Az-og6">
                             <rect key="frame" x="80" y="20" width="169.5" height="21"/>
@@ -65,10 +65,10 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iew-a3-wYw">
-                            <rect key="frame" x="0.0" y="131" width="356" height="356"/>
+                            <rect key="frame" x="0.0" y="131" width="400" height="400"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkfit" translatesAutoresizingMaskIntoConstraints="NO" id="7vs-5i-9uA">
-                                    <rect key="frame" x="0.0" y="0.0" width="356" height="356"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -81,7 +81,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnO-Np-pTO" customClass="LikePhoto" customModule="VKontakte" customModuleProvider="target">
-                            <rect key="frame" x="316" y="467" width="40" height="20"/>
+                            <rect key="frame" x="360" y="511" width="40" height="20"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="cnO-Np-pTO" secondAttribute="height" multiplier="2:1" id="Tb8-RB-Sg6"/>
@@ -89,7 +89,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hj3-SJ-2Ha">
-                            <rect key="frame" x="121" y="90" width="114" height="21"/>
+                            <rect key="frame" x="143" y="90" width="114" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -119,6 +119,7 @@
                 <constraint firstItem="wZg-IM-CYp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="UB9-xf-har"/>
                 <constraint firstItem="wZg-IM-CYp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="eiW-za-Tge"/>
                 <constraint firstItem="wZg-IM-CYp" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" id="j1K-gA-skZ"/>
+                <constraint firstItem="wZg-IM-CYp" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" id="ocl-Vd-RgX"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

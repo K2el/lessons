@@ -22,16 +22,36 @@ import UIKit
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         
         if image.image == UIImage(systemName: "heart") {
-            image.image = UIImage(systemName: "heart.fill")
-            image.tintColor = UIColor.red
+            UIView.animate(withDuration: 0.2, delay: 0, animations: {
+                self.image.alpha = 0.1
+            }, completion: {_ in
+                
+                UIView.animate(withDuration: 0.2, delay: 0, animations: {
+                    self.image.image = UIImage(systemName: "heart.fill")
+                    self.image.tintColor = UIColor.red
+                    self.image.alpha = 1
+                })
+                
+            })
+            
         } else {
             image.image = UIImage(systemName: "heart")
             image.tintColor = UIColor.black
         }
         
         if textLabel.text == "0" {
-            textLabel.text = "1"
-            textLabel.textColor = UIColor.red
+            UIView.animate(withDuration: 0.2, delay: 0, animations: {
+                self.textLabel.alpha = 0.1
+            }, completion: {_ in
+                
+                UIView.animate(withDuration: 0.2, delay: 0, animations: {
+                    self.textLabel.textColor = UIColor.red
+                    self.textLabel.text = "1"
+                    self.textLabel.alpha = 1
+                })
+                
+            })
+            
         } else {
             textLabel.text = "0"
             textLabel.textColor = UIColor.black

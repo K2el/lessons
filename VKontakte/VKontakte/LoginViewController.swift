@@ -13,6 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pswdInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var authButton: UIButton!
+
+    @IBOutlet weak var loadTextView: UIView!
+    @IBOutlet weak var firstLoadText: UILabel!
+    @IBOutlet weak var secondLoadText: UILabel!
+    @IBOutlet weak var lastLoadText: UILabel!
     
     // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
@@ -84,7 +89,25 @@ class LoginViewController: UIViewController {
         
         authButton.backgroundColor = .blue
         
+        loadAnimation()
+       
+        
+        
     }
+    
+    func loadAnimation() {
+        UIView.animate(withDuration: 2, delay: 0, options: [.autoreverse, .repeat], animations: {
+            self.firstLoadText.alpha = 0.1
+        })
+        UIView.animate(withDuration: 2, delay: 1, options: [.autoreverse, .repeat], animations: {
+            self.secondLoadText.alpha = 0.1
+        })
+        UIView.animate(withDuration: 2, delay: 2, options: [.autoreverse, .repeat], animations: {
+            self.lastLoadText.alpha = 0.1
+        })
+    }
+    
+
     
     
     override func viewWillAppear(_ animated: Bool) {
