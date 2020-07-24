@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  VKontakte
 //
 //  Created by Анна Ковтун on 02.07.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var pswdInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -38,20 +38,42 @@ class ViewController: UIViewController {
         self.scrollView.endEditing(true)
     }
     
-    @IBAction func auth(_ sender: Any) {
-        // Получаем текст логина
-        let login = loginInput.text!
-        // Получаем текст-пароль
-        let password = pswdInput.text!
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // Проверяем данные
+        let checkResult = checkUserData()
         
-        // Проверяем, верны ли они
-        if login == "admin" && password == "123456" {
-            print("успешная авторизация")
-        } else {
-            print("неуспешная авторизация")
+        // Если данные не верны, покажем ошибку
+        if !checkResult {
+            showLoginError()
         }
-
+        
+        // Вернем результат
+        return checkResult
     }
+    
+    func checkUserData() -> Bool {
+        guard let login = loginInput.text,
+            let password = pswdInput.text else { return false }
+        
+        if login == "admin" && password == "123456" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showLoginError() {
+        // Создаем контроллер
+        let alter = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
+        // Создаем кнопку для UIAlertController
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        // Добавляем кнопку на UIAlertController
+        alter.addAction(action)
+        // Показываем UIAlertController
+        present(alter, animated: true, completion: nil)
+    }
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
