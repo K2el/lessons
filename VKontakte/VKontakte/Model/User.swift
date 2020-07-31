@@ -60,8 +60,8 @@ var myFriends: [User] = [
 ]
 
 var friendsPhoto: [UIImage?] = [
+    UIImage(systemName: "heart"),
+    UIImage(systemName: "heart.fill"),
     UIImage(named: "darkfit"),
-    UIImage(named: "darkfit"),
-    UIImage(named: "darkfit"),
-    UIImage(named: "darkfit")
+    UIImage(systemName: "folder")
 ]

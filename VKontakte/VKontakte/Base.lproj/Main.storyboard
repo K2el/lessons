@@ -291,6 +291,7 @@
                                 <connections>
                                     <outlet property="friendPhoto" destination="TRS-hT-6YK" id="c8B-Hv-bam"/>
                                     <outlet property="likePhoto" destination="Tye-bp-9Vm" id="jXw-AK-iOT"/>
+                                    <segue destination="mcd-WH-wgb" kind="show" id="VOA-e5-VmE"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -305,6 +306,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wo2-ik-CEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3328" y="-1148"/>
+        </scene>
+        <!--One Photo View Controller-->
+        <scene sceneID="EFe-kc-fjh">
+            <objects>
+                <viewController id="mcd-WH-wgb" customClass="OnePhotoViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7fh-1T-WTw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOS-zo-DOG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="676"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xPb-Ql-4gs" firstAttribute="trailing" secondItem="gOS-zo-DOG" secondAttribute="trailing" id="Etn-DT-ElG"/>
+                            <constraint firstItem="xPb-Ql-4gs" firstAttribute="bottom" secondItem="gOS-zo-DOG" secondAttribute="bottom" id="Lbd-gp-mlN"/>
+                            <constraint firstItem="gOS-zo-DOG" firstAttribute="top" secondItem="xPb-Ql-4gs" secondAttribute="top" id="hFK-aH-rwe"/>
+                            <constraint firstItem="gOS-zo-DOG" firstAttribute="top" secondItem="xPb-Ql-4gs" secondAttribute="top" id="ypx-BD-rOh"/>
+                            <constraint firstItem="gOS-zo-DOG" firstAttribute="leading" secondItem="xPb-Ql-4gs" secondAttribute="leading" id="zJ5-fv-iLc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xPb-Ql-4gs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OCu-Le-zUz"/>
+                    <connections>
+                        <outlet property="photoArea" destination="gOS-zo-DOG" id="MdA-Yy-1vc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNQ-t4-tDy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4109" y="-1148"/>
         </scene>
         <!--Друзья-->
         <scene sceneID="JFy-TY-6IP">

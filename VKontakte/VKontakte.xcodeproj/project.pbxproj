@@ -10,6 +10,7 @@
 		9519873124C5B81000D1FDF6 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9519873024C5B81000D1FDF6 /* NewsCell.xib */; };
 		9519873324C5B95100D1FDF6 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519873224C5B95100D1FDF6 /* NewsViewController.swift */; };
 		9519873624C5BF5700D1FDF6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519873524C5BF5700D1FDF6 /* NewsCell.swift */; };
+		9519873A24CF365000D1FDF6 /* OnePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519873924CF365000D1FDF6 /* OnePhotoViewController.swift */; };
 		952AA7B124ADE5C500C09F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B024ADE5C500C09F83 /* AppDelegate.swift */; };
 		952AA7B324ADE5C500C09F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */; };
 		952AA7B524ADE5C500C09F83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B424ADE5C500C09F83 /* LoginViewController.swift */; };
@@ -53,6 +54,7 @@
 		9519873024C5B81000D1FDF6 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		9519873224C5B95100D1FDF6 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		9519873524C5BF5700D1FDF6 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		9519873924CF365000D1FDF6 /* OnePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePhotoViewController.swift; sourceTree = "<group>"; };
 		952AA7AD24ADE5C500C09F83 /* VKontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		952AA7B024ADE5C500C09F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */,
 				95D7676D24B876A1002EBA09 /* FriendsPhotoViewController.swift */,
+				9519873924CF365000D1FDF6 /* OnePhotoViewController.swift */,
 				95D7676F24B876C2002EBA09 /* FriendsPhotoCellView.swift */,
 				957CB1BD24B86FEA0094394E /* MyFriendsCellView.swift */,
 			);
@@ -343,6 +346,7 @@
 				95D7677024B876C2002EBA09 /* FriendsPhotoCellView.swift in Sources */,
 				952AA7B124ADE5C500C09F83 /* AppDelegate.swift in Sources */,
 				95CC781524B70A700053EA1C /* MyGroupsCellView.swift in Sources */,
+				9519873A24CF365000D1FDF6 /* OnePhotoViewController.swift in Sources */,
 				95A893EE24BB0CD5007F8F41 /* TestImageView.swift in Sources */,
 				95D7677524B881F4002EBA09 /* Group.swift in Sources */,
 				952AA7B324ADE5C500C09F83 /* SceneDelegate.swift in Sources */,
