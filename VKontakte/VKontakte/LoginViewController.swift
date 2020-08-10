@@ -13,8 +13,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pswdInput: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var authButton: UIButton!
-    
 
+    @IBOutlet weak var loadTextView: UIView!
+    @IBOutlet weak var firstLoadText: UILabel!
+    @IBOutlet weak var secondLoadText: UILabel!
+    @IBOutlet weak var lastLoadText: UILabel!
+    
     // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
         // Получаем размер клавиатуры
@@ -84,7 +88,26 @@ class LoginViewController: UIViewController {
         scrollView.addGestureRecognizer(hideKeyboardGesture)
         
         authButton.backgroundColor = .blue
+        
+        loadAnimation()
+       
+        
+        
     }
+    
+    func loadAnimation() {
+        UIView.animate(withDuration: 2, delay: 0, options: [.autoreverse, .repeat], animations: {
+            self.firstLoadText.alpha = 0.1
+        })
+        UIView.animate(withDuration: 2, delay: 1, options: [.autoreverse, .repeat], animations: {
+            self.secondLoadText.alpha = 0.1
+        })
+        UIView.animate(withDuration: 2, delay: 2, options: [.autoreverse, .repeat], animations: {
+            self.lastLoadText.alpha = 0.1
+        })
+    }
+    
+
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,29 +119,6 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @IBAction func pswdInputEditingDidBegin(_ sender: Any) {
-        if pswdInput.text == "Пароль" {
-            pswdInput.text = ""
-        }
-    }
-    
-    @IBAction func pswdInputEditingDidEnd(_ sender: Any) {
-        if pswdInput.text == "" {
-                   pswdInput.text = "Пароль"
-               }
-    }
-    
-    @IBAction func loginInputEditingDidBegin(_ sender: Any) {
-        if loginInput.text == "Логин" {
-            loginInput.text = ""
-        }
-    }
-    
-    @IBAction func loginInputEditingDidEnd(_ sender: Any) {
-        if loginInput.text == "" {
-            loginInput.text = "Логин"
-        }
-    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9519873124C5B81000D1FDF6 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9519873024C5B81000D1FDF6 /* NewsCell.xib */; };
+		9519873324C5B95100D1FDF6 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519873224C5B95100D1FDF6 /* NewsViewController.swift */; };
+		9519873624C5BF5700D1FDF6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519873524C5BF5700D1FDF6 /* NewsCell.swift */; };
+		9519873A24CF365000D1FDF6 /* OnePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519873924CF365000D1FDF6 /* OnePhotoViewController.swift */; };
+		9519873F24D43C5300D1FDF6 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519873E24D43C5300D1FDF6 /* Test.swift */; };
+		9519874124DEAE6800D1FDF6 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519874024DEAE6800D1FDF6 /* CustomSegue.swift */; };
+		9519874324E146C800D1FDF6 /* CustomUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519874224E146C800D1FDF6 /* CustomUINavigationController.swift */; };
+		9519874524E153AD00D1FDF6 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519874424E153AD00D1FDF6 /* Session.swift */; };
 		952AA7B124ADE5C500C09F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B024ADE5C500C09F83 /* AppDelegate.swift */; };
 		952AA7B324ADE5C500C09F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */; };
 		952AA7B524ADE5C500C09F83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B424ADE5C500C09F83 /* LoginViewController.swift */; };
@@ -15,6 +23,18 @@
 		952AA7BD24ADE5C600C09F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952AA7BB24ADE5C600C09F83 /* LaunchScreen.storyboard */; };
 		952AA7C824ADE5C600C09F83 /* VKontakteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7C724ADE5C600C09F83 /* VKontakteTests.swift */; };
 		952AA7D324ADE5C600C09F83 /* VKontakteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7D224ADE5C600C09F83 /* VKontakteUITests.swift */; };
+		957CB1B824B764020094394E /* GlobalGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1B724B764020094394E /* GlobalGroupsViewController.swift */; };
+		957CB1BA24B764950094394E /* GlobalGroupsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1B924B764950094394E /* GlobalGroupsCellView.swift */; };
+		957CB1BC24B86DD10094394E /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */; };
+		957CB1BE24B86FEA0094394E /* MyFriendsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1BD24B86FEA0094394E /* MyFriendsCellView.swift */; };
+		95A893EE24BB0CD5007F8F41 /* TestImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A893ED24BB0CD5007F8F41 /* TestImageView.swift */; };
+		95A893F024BC54E4007F8F41 /* LikePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A893EF24BC54E4007F8F41 /* LikePhoto.swift */; };
+		95CC781524B70A700053EA1C /* MyGroupsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC781424B70A700053EA1C /* MyGroupsCellView.swift */; };
+		95CC781724B70FEC0053EA1C /* MyGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC781624B70FEC0053EA1C /* MyGroupsViewController.swift */; };
+		95D7676E24B876A1002EBA09 /* FriendsPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7676D24B876A1002EBA09 /* FriendsPhotoViewController.swift */; };
+		95D7677024B876C2002EBA09 /* FriendsPhotoCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7676F24B876C2002EBA09 /* FriendsPhotoCellView.swift */; };
+		95D7677324B88022002EBA09 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7677224B88022002EBA09 /* User.swift */; };
+		95D7677524B881F4002EBA09 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7677424B881F4002EBA09 /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9519873024C5B81000D1FDF6 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		9519873224C5B95100D1FDF6 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		9519873524C5BF5700D1FDF6 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		9519873924CF365000D1FDF6 /* OnePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePhotoViewController.swift; sourceTree = "<group>"; };
+		9519873E24D43C5300D1FDF6 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		9519874024DEAE6800D1FDF6 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		9519874224E146C800D1FDF6 /* CustomUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUINavigationController.swift; sourceTree = "<group>"; };
+		9519874424E153AD00D1FDF6 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		952AA7AD24ADE5C500C09F83 /* VKontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		952AA7B024ADE5C500C09F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +77,18 @@
 		952AA7CE24ADE5C600C09F83 /* VKontakteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKontakteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		952AA7D224ADE5C600C09F83 /* VKontakteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKontakteUITests.swift; sourceTree = "<group>"; };
 		952AA7D424ADE5C600C09F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		957CB1B724B764020094394E /* GlobalGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsViewController.swift; sourceTree = "<group>"; };
+		957CB1B924B764950094394E /* GlobalGroupsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsCellView.swift; sourceTree = "<group>"; };
+		957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
+		957CB1BD24B86FEA0094394E /* MyFriendsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsCellView.swift; sourceTree = "<group>"; };
+		95A893ED24BB0CD5007F8F41 /* TestImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestImageView.swift; sourceTree = "<group>"; };
+		95A893EF24BC54E4007F8F41 /* LikePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikePhoto.swift; sourceTree = "<group>"; };
+		95CC781424B70A700053EA1C /* MyGroupsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsCellView.swift; sourceTree = "<group>"; };
+		95CC781624B70FEC0053EA1C /* MyGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsViewController.swift; sourceTree = "<group>"; };
+		95D7676D24B876A1002EBA09 /* FriendsPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoViewController.swift; sourceTree = "<group>"; };
+		95D7676F24B876C2002EBA09 /* FriendsPhotoCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoCellView.swift; sourceTree = "<group>"; };
+		95D7677224B88022002EBA09 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		95D7677424B881F4002EBA09 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +116,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9519873424C5B95800D1FDF6 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				9519873024C5B81000D1FDF6 /* NewsCell.xib */,
+				9519873524C5BF5700D1FDF6 /* NewsCell.swift */,
+				9519873224C5B95100D1FDF6 /* NewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		952AA7A424ADE5C500C09F83 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +149,19 @@
 		952AA7AF24ADE5C500C09F83 /* VKontakte */ = {
 			isa = PBXGroup;
 			children = (
+				95D7677124B87FF9002EBA09 /* Model */,
+				95D7677624B88697002EBA09 /* Friends */,
+				95D7677724B886C2002EBA09 /* Groups */,
+				9519873424C5B95800D1FDF6 /* News */,
 				952AA7B024ADE5C500C09F83 /* AppDelegate.swift */,
+				9519874224E146C800D1FDF6 /* CustomUINavigationController.swift */,
 				952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */,
+				9519873E24D43C5300D1FDF6 /* Test.swift */,
 				952AA7B424ADE5C500C09F83 /* LoginViewController.swift */,
+				9519874024DEAE6800D1FDF6 /* CustomSegue.swift */,
 				952AA7B624ADE5C500C09F83 /* Main.storyboard */,
+				95A893EF24BC54E4007F8F41 /* LikePhoto.swift */,
+				95A893ED24BB0CD5007F8F41 /* TestImageView.swift */,
 				952AA7B924ADE5C600C09F83 /* Assets.xcassets */,
 				952AA7BB24ADE5C600C09F83 /* LaunchScreen.storyboard */,
 				952AA7BE24ADE5C600C09F83 /* Info.plist */,
@@ -126,6 +185,39 @@
 				952AA7D424ADE5C600C09F83 /* Info.plist */,
 			);
 			path = VKontakteUITests;
+			sourceTree = "<group>";
+		};
+		95D7677124B87FF9002EBA09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95D7677224B88022002EBA09 /* User.swift */,
+				95D7677424B881F4002EBA09 /* Group.swift */,
+				9519874424E153AD00D1FDF6 /* Session.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95D7677624B88697002EBA09 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */,
+				95D7676D24B876A1002EBA09 /* FriendsPhotoViewController.swift */,
+				9519873924CF365000D1FDF6 /* OnePhotoViewController.swift */,
+				95D7676F24B876C2002EBA09 /* FriendsPhotoCellView.swift */,
+				957CB1BD24B86FEA0094394E /* MyFriendsCellView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		95D7677724B886C2002EBA09 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				957CB1B724B764020094394E /* GlobalGroupsViewController.swift */,
+				957CB1B924B764950094394E /* GlobalGroupsCellView.swift */,
+				95CC781624B70FEC0053EA1C /* MyGroupsViewController.swift */,
+				95CC781424B70A700053EA1C /* MyGroupsCellView.swift */,
+			);
+			path = Groups;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +326,7 @@
 			files = (
 				952AA7BD24ADE5C600C09F83 /* LaunchScreen.storyboard in Resources */,
 				952AA7BA24ADE5C600C09F83 /* Assets.xcassets in Resources */,
+				9519873124C5B81000D1FDF6 /* NewsCell.xib in Resources */,
 				952AA7B824ADE5C500C09F83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,9 +352,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957CB1BC24B86DD10094394E /* MyFriendsViewController.swift in Sources */,
+				957CB1B824B764020094394E /* GlobalGroupsViewController.swift in Sources */,
 				952AA7B524ADE5C500C09F83 /* LoginViewController.swift in Sources */,
+				95D7677024B876C2002EBA09 /* FriendsPhotoCellView.swift in Sources */,
+				9519873F24D43C5300D1FDF6 /* Test.swift in Sources */,
 				952AA7B124ADE5C500C09F83 /* AppDelegate.swift in Sources */,
+				95CC781524B70A700053EA1C /* MyGroupsCellView.swift in Sources */,
+				9519873A24CF365000D1FDF6 /* OnePhotoViewController.swift in Sources */,
+				9519874124DEAE6800D1FDF6 /* CustomSegue.swift in Sources */,
+				95A893EE24BB0CD5007F8F41 /* TestImageView.swift in Sources */,
+				95D7677524B881F4002EBA09 /* Group.swift in Sources */,
 				952AA7B324ADE5C500C09F83 /* SceneDelegate.swift in Sources */,
+				95A893F024BC54E4007F8F41 /* LikePhoto.swift in Sources */,
+				9519873324C5B95100D1FDF6 /* NewsViewController.swift in Sources */,
+				9519874324E146C800D1FDF6 /* CustomUINavigationController.swift in Sources */,
+				95CC781724B70FEC0053EA1C /* MyGroupsViewController.swift in Sources */,
+				95D7677324B88022002EBA09 /* User.swift in Sources */,
+				9519873624C5BF5700D1FDF6 /* NewsCell.swift in Sources */,
+				9519874524E153AD00D1FDF6 /* Session.swift in Sources */,
+				957CB1BE24B86FEA0094394E /* MyFriendsCellView.swift in Sources */,
+				95D7676E24B876A1002EBA09 /* FriendsPhotoViewController.swift in Sources */,
+				957CB1BA24B764950094394E /* GlobalGroupsCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
