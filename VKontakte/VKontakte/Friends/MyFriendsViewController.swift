@@ -11,6 +11,7 @@ import UIKit
 
 
 class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
+
     
     var sections: [String] = []
     var newMyFriends: [[User]] = []

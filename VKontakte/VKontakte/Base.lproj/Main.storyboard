@@ -25,12 +25,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jw3-bg-a9v" userLabel="Pswd">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jw3-bg-a9v" userLabel="Pswd">
                                         <rect key="frame" x="107" y="194.5" width="200" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plJ-6t-LFT" userLabel="Login">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plJ-6t-LFT" userLabel="Login">
                                         <rect key="frame" x="107" y="128.5" width="200" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="SMZ-wH-FxL"/>
@@ -47,7 +47,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Wcb-fp-Jz3" kind="presentation" modalPresentationStyle="fullScreen" id="SLF-Ow-QtP">
+                                            <segue destination="Wcb-fp-Jz3" kind="presentation" customClass="CustomSegue" customModule="VKontakte" customModuleProvider="target" modalPresentationStyle="fullScreen" id="SLF-Ow-QtP">
                                                 <segue key="commit" inheritsFrom="parent" id="osI-Ez-VGy"/>
                                                 <segue key="preview" inheritsFrom="commit" id="iM6-fL-3E8"/>
                                             </segue>
