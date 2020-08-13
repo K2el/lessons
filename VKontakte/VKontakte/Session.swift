@@ -10,7 +10,7 @@ import UIKit
 
 class Session {
     
-    static let instance = Session()
+    static let shared = Session()
     
     private init(){}
     

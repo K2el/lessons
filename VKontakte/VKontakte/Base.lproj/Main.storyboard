@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kle-Yy-itp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -590,6 +590,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZK-TY-Va6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1612" y="-1963"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="7Kj-rP-sTW">
+            <objects>
+                <viewController id="Kle-Yy-itp" customClass="VKLoginController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YEm-o1-jDt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W63-jH-BNs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="leading" secondItem="iJ1-Fu-Ddx" secondAttribute="leading" id="K6H-Aa-wil"/>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="top" secondItem="iJ1-Fu-Ddx" secondAttribute="top" id="NsF-rg-BDz"/>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="leading" secondItem="iJ1-Fu-Ddx" secondAttribute="leading" id="bQa-2h-PE3"/>
+                            <constraint firstItem="iJ1-Fu-Ddx" firstAttribute="bottom" secondItem="W63-jH-BNs" secondAttribute="bottom" id="feY-Vh-zFh"/>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="top" secondItem="iJ1-Fu-Ddx" secondAttribute="top" id="k0i-ZY-I6o"/>
+                            <constraint firstItem="iJ1-Fu-Ddx" firstAttribute="trailing" secondItem="W63-jH-BNs" secondAttribute="trailing" id="kUY-UH-28T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iJ1-Fu-Ddx"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="W63-jH-BNs" id="TiV-Yv-gvC"/>
+                        <segue destination="HA5-Eh-h4h" kind="show" identifier="Run the App" id="lEy-s6-9xU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oI1-Wh-aMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88" y="-31"/>
+        </scene>
+        <!--Test Network View Controller-->
+        <scene sceneID="9Ac-Ip-UW6">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="HA5-Eh-h4h" customClass="TestNetworkViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7WE-cA-lai">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запросы выполнены, смотреть в консоль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWU-R1-0Ep">
+                                <rect key="frame" x="41.5" y="442.5" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BWU-R1-0Ep" firstAttribute="centerY" secondItem="hEh-bR-dif" secondAttribute="centerY" id="7P8-91-Vqh"/>
+                            <constraint firstItem="BWU-R1-0Ep" firstAttribute="centerX" secondItem="hEh-bR-dif" secondAttribute="centerX" id="blc-zE-NT3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hEh-bR-dif"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ICG-dm-K48"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWD-WL-7NQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88" y="700"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
