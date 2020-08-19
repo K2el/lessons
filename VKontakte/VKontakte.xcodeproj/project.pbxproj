@@ -20,6 +20,7 @@
 		9519874924E4292D00D1FDF6 /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519874824E4292D00D1FDF6 /* VKLoginController.swift */; };
 		9519874B24E42A8B00D1FDF6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9519874A24E42A8B00D1FDF6 /* WebKit.framework */; };
 		9519877024E433B000D1FDF6 /* TestNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519876F24E433B000D1FDF6 /* TestNetworkViewController.swift */; };
+		9519877224EADFB800D1FDF6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519877124EADFB800D1FDF6 /* UIImageView.swift */; };
 		952AA7B124ADE5C500C09F83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B024ADE5C500C09F83 /* AppDelegate.swift */; };
 		952AA7B324ADE5C500C09F83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */; };
 		952AA7B524ADE5C500C09F83 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7B424ADE5C500C09F83 /* LoginViewController.swift */; };
@@ -79,6 +80,7 @@
 		9519874824E4292D00D1FDF6 /* VKLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
 		9519874A24E42A8B00D1FDF6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9519876F24E433B000D1FDF6 /* TestNetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkViewController.swift; sourceTree = "<group>"; };
+		9519877124EADFB800D1FDF6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		952AA7AD24ADE5C500C09F83 /* VKontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		952AA7B024ADE5C500C09F83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				952AA7B024ADE5C500C09F83 /* AppDelegate.swift */,
 				9519874224E146C800D1FDF6 /* CustomUINavigationController.swift */,
 				952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */,
+				9519877124EADFB800D1FDF6 /* UIImageView.swift */,
 				9519873E24D43C5300D1FDF6 /* Test.swift */,
 				9519874424E153AD00D1FDF6 /* Session.swift */,
 				952AA7B424ADE5C500C09F83 /* LoginViewController.swift */,
@@ -529,6 +532,7 @@
 				952AA7B324ADE5C500C09F83 /* SceneDelegate.swift in Sources */,
 				95A893F024BC54E4007F8F41 /* LikePhoto.swift in Sources */,
 				9519873324C5B95100D1FDF6 /* NewsViewController.swift in Sources */,
+				9519877224EADFB800D1FDF6 /* UIImageView.swift in Sources */,
 				9519874324E146C800D1FDF6 /* CustomUINavigationController.swift in Sources */,
 				9519874924E4292D00D1FDF6 /* VKLoginController.swift in Sources */,
 				95CC781724B70FEC0053EA1C /* MyGroupsViewController.swift in Sources */,

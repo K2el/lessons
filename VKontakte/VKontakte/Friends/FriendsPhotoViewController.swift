@@ -11,9 +11,19 @@ import UIKit
 
 class FriendsPhotoViewController: UICollectionViewController {
     
+    var vkPhotos: [VKPhotos] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("id пользователя: \(row)")
+        
+        let test = NetworkService()
+        
+        test.loadPhotos(userId: MyFriendsViewController.friendsId, token: Session.shared.token){ [weak self] vkPhotos in
+        // сохраняем полученные данные в массиве
+            self?.vkPhotos = vkPhotos
+            self?.collectionView.reloadData()
+        }
+        //print("id пользователя: \(MyFriendsViewController.friendsId)")
     }
     
     
@@ -22,15 +32,23 @@ class FriendsPhotoViewController: UICollectionViewController {
         }
         
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return friendsPhoto.count
+        return vkPhotos.count
         }
         
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendsPhotoCellView
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendsPhotoCellView
         
-            cell.friendPhoto.image = friendsPhoto[indexPath.row]
+        //let image =
             
+        cell.friendPhoto.sd_setImage(with: URL(string: vkPhotos[indexPath.row].sizes[0].url))
+        
+        //image?.downloaded(from: vkPhotos[indexPath.row].sizes[0].url)
+        
+        //cell.friendsPhoto.downloaded(from: vkPhotos[indexPath.row].sizes[0].url)
+            
+        //print(vkPhotos[indexPath.row].sizes[0].url)
+        
             return cell
             
         }

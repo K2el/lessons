@@ -135,7 +135,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ctx-Ni-Fuh">
             <objects>
-                <tabBarController id="Wcb-fp-Jz3" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="Wcb-fp-Jz3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="emM-OK-6Vk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V3a-lU-Pt0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -301,6 +301,7 @@
                         </connections>
                     </collectionView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="AMU-dj-aan"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wo2-ik-CEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -344,7 +345,7 @@
             <objects>
                 <tableViewController id="7Ae-hl-JM6" customClass="MyFriendsViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="V0c-UE-sbu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -432,7 +433,7 @@
                 <navigationController id="wFG-ht-fco" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="pj4-KT-azt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="89Q-HH-LWL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -543,7 +544,7 @@
                 <navigationController id="c7J-Yj-YLr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" id="QWd-1w-AOr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zhK-g0-lqZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -559,7 +560,7 @@
             <objects>
                 <tableViewController id="ZFC-9G-lbk" customClass="NewsViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="530" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jde-vF-Yig">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections/>
@@ -580,7 +581,7 @@
                 <navigationController id="q3j-dB-Fue" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Новости" id="HD7-Qz-q1y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AqH-YV-Hzz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -621,7 +622,7 @@
                     </view>
                     <connections>
                         <outlet property="webView" destination="W63-jH-BNs" id="TiV-Yv-gvC"/>
-                        <segue destination="HA5-Eh-h4h" kind="show" identifier="Run the App" id="lEy-s6-9xU"/>
+                        <segue destination="Wcb-fp-Jz3" kind="show" identifier="Run the App" id="2TN-Yj-67H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oI1-Wh-aMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -658,6 +659,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SLF-Ow-QtP"/>
+        <segue reference="2TN-Yj-67H"/>
     </inferredMetricsTieBreakers>
 </document>

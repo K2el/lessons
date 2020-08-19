@@ -19,16 +19,16 @@ class TestNetworkViewController: UIViewController {
         let test = NetworkService()
         
         //Вывод групп пользователя
-        test.loadGroups(token: Session.shared.token)
+        //test.loadGroups(token: Session.shared.token)
         
         //Вывод друзей пользователя
-        test.loadFriends(userId: Session.shared.userId, token: Session.shared.token)
+        //test.loadFriends(userId: Session.shared.userId, token: Session.shared.token)
         
         //Вывод фотографий пользователя
-        test.loadPhotos(userId: Session.shared.userId, token: Session.shared.token)
+        //test.loadPhotos(userId: Session.shared.userId, token: Session.shared.token)
         
         //Поиск групп
-        test.searchGroups(userId: Session.shared.userId, token: Session.shared.token, searchText: "пример")
+        //test.searchGroups(userId: Session.shared.userId, token: Session.shared.token, searchText: "пример")
         
     }
 }

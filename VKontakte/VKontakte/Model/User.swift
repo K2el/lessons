@@ -65,3 +65,68 @@ var friendsPhoto: [UIImage?] = [
     UIImage(named: "darkfit"),
     UIImage(systemName: "folder")
 ]
+
+
+
+struct UserCodable: Codable {
+    let response: Response
+}
+
+struct Response: Codable {
+    let count: Int
+    let items: [VKuser]
+}
+
+struct VKuser: Codable {
+    let id: Int
+    let firstName, lastName: String
+    let isClosed, canAccessClosed: Bool?
+    let photo100: String
+    let online: Int
+    let trackCode: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case isClosed = "is_closed"
+        case canAccessClosed = "can_access_closed"
+        case photo100 = "photo_100"
+        case online
+        case trackCode = "track_code"
+    }
+}
+
+
+struct PhotosCodable: Codable {
+    let response: ResponsePhotos
+}
+
+struct ResponsePhotos: Codable {
+    let count: Int
+    let items: [VKPhotos]
+}
+
+struct VKPhotos: Codable {
+    let albumID, date, id, ownerID: Int
+    let hasTags: Bool
+    let postID: Int?
+    let sizes: [SizePhotos]
+    let text: String
+
+    enum CodingKeys: String, CodingKey {
+        case albumID = "album_id"
+        case date, id
+        case ownerID = "owner_id"
+        case hasTags = "has_tags"
+        case postID = "post_id"
+        case sizes, text
+    }
+}
+
+struct SizePhotos: Codable {
+    let height: Int
+    let url: String
+    let type: String
+    let width: Int
+}

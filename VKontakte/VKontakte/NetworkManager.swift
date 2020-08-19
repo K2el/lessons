@@ -133,47 +133,68 @@ class NetworkService {
 //    }
     
     //список групп
-    func loadGroups(token: String) {
+    func loadGroups(token: String, completion: @escaping ([VKGroup]) -> Void) {
         let baseUrl = "https://api.vk.com"
         let path = "/method/groups.get"
         
         let params: Parameters = [
             "access_token": token,
-            "extended": 1,
-            "v": "5.92",
-            "count": "1"
+            "v": "5.122",
+            "extended": "1",
+            "count": "20"
         ]
         
+        
         NetworkService.session.request(baseUrl + path, method: .get, parameters: params).responseJSON { response in
-            guard let json = response.value else { return }
+            guard let data = response.data else { return }
             
-            print(json)
+            //Парсинг с использованием Codable
+            do {
+                let vkGroups = try JSONDecoder().decode(GroupCodable.self, from: data).response.items
+                
+                completion(vkGroups)
+                
+                print("!!!! \(vkGroups)")
+                
+            } catch {
+                print(error)
+            }
+                        
         }
+        
     }
     
     //список друзей
-    func loadFriends(userId: Int, token: String) {
+    func loadFriends(userId: Int, token: String, completion: @escaping ([VKuser]) -> Void) {
         let baseUrl = "https://api.vk.com"
         let path = "/method/friends.get"
         
         let params: Parameters = [
             "access_token": token,
-            "user_id": userId,
-            "order": "random",
+            "fields": "photo_100",
             "v": "5.122",
-            "fields": "nickname",
-            "count": "1"
+            "count": "50"
         ]
         
         NetworkService.session.request(baseUrl + path, method: .get, parameters: params).responseJSON { response in
-            guard let json = response.value else { return }
+            guard let data = response.data else { return }
             
-            print(json)
+            //Парсинг с использованием Codable
+            do {
+                let vkUsers = try JSONDecoder().decode(UserCodable.self, from: data).response.items
+                completion(vkUsers)
+                //print("!!!! \(vkUsers)")
+            } catch {
+                print(error)
+            }
+                        
         }
+        
+
     }
     
     //список фотографий
-    func loadPhotos(userId: Int, token: String) {
+    func loadPhotos(userId: Int, token: String, completion: @escaping ([VKPhotos]) -> Void) {
         let baseUrl = "https://api.vk.com"
         let path = "/method/photos.get"
         
@@ -181,20 +202,29 @@ class NetworkService {
             "access_token": token,
             "album_id": "wall",
             "owner_id": userId,
-            "extended": "1",
             "v": "5.122",
-            "count": "1"
+            "count": "10"
         ]
         
         NetworkService.session.request(baseUrl + path, method: .get, parameters: params).responseJSON { response in
-            guard let json = response.value else { return }
+            guard let data = response.data else { return }
             
-            print(json)
+            //Парсинг с использованием Codable
+            do {
+                let vkPhotos = try JSONDecoder().decode(PhotosCodable.self, from: data).response.items
+                
+                completion(vkPhotos)
+                
+                //print("!!!! \(vkPhotos)")
+            } catch {
+                print(error)
+            }
+                        
         }
     }
     
     //поиск групп
-    func searchGroups(userId: Int, token: String, searchText: String) {
+    func searchGroups(userId: Int, token: String, searchText: String, completion: @escaping ([VKGroupSearch]) -> Void) {
           let baseUrl = "https://api.vk.com"
           let path = "/method/groups.search"
           
@@ -203,13 +233,23 @@ class NetworkService {
               "q": searchText,
               "type": "group",
               "v": "5.122",
-              "count": "1"
+              "count": "20"
           ]
           
           NetworkService.session.request(baseUrl + path, method: .get, parameters: params).responseJSON { response in
-              guard let json = response.value else { return }
+              guard let data = response.data else { return }
               
-              print(json)
+              //Парсинг с использованием Codable
+              do {
+                  let vkGroupSearch = try JSONDecoder().decode(GroupSearchCodable.self, from: data).response.items
+                  
+                  completion(vkGroupSearch)
+                  
+                  //print("!!!! \(vkPhotos)")
+              } catch {
+                  print(error)
+              }
+                          
           }
       }
 }

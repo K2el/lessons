@@ -60,13 +60,13 @@ extension VKLoginController: WKNavigationDelegate {
         
         guard let token = params["access_token"],
             let userIdString = params["user_id"],
-            let _ = Int(userIdString) else {
+            let userId = Int(userIdString) else {
                 decisionHandler(.allow)
                 return
         }
         
         Session.shared.token = token
-        Session.shared.userId = Int(userIdString)!
+        Session.shared.userId = userId
         
         performSegue(withIdentifier: "Run the App", sender: nil)
         

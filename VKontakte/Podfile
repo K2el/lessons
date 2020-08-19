@@ -6,6 +6,7 @@ target 'VKontakte' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SDWebImage'
 
   # Pods for VKontakte
 
