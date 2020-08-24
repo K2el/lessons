@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import RealmSwift
 
 class NetworkService {
     
@@ -152,6 +153,7 @@ class NetworkService {
             do {
                 let vkGroups = try JSONDecoder().decode(GroupCodable.self, from: data).response.items
                 
+                self.saveGroupsData(vkGroups)
                 completion(vkGroups)
                 
                 print("!!!! \(vkGroups)")
@@ -178,10 +180,11 @@ class NetworkService {
         
         NetworkService.session.request(baseUrl + path, method: .get, parameters: params).responseJSON { response in
             guard let data = response.data else { return }
-            
+            //print(data)
             //Парсинг с использованием Codable
             do {
                 let vkUsers = try JSONDecoder().decode(UserCodable.self, from: data).response.items
+                self.saveVKuserData(vkUsers)
                 completion(vkUsers)
                 //print("!!!! \(vkUsers)")
             } catch {
@@ -213,6 +216,7 @@ class NetworkService {
             do {
                 let vkPhotos = try JSONDecoder().decode(PhotosCodable.self, from: data).response.items
                 
+                self.saveVKPhotosData(vkPhotos)
                 completion(vkPhotos)
                 
                 //print("!!!! \(vkPhotos)")
@@ -252,4 +256,68 @@ class NetworkService {
                           
           }
       }
+    
+    //сохранение пользователей в Realm
+        func saveVKuserData(_ vkUsers: [VKuser]) {
+    // обработка исключений при работе с хранилищем
+            do {
+    // получаем доступ к хранилищу
+                let realm = try Realm()
+                
+    // начинаем изменять хранилище
+                realm.beginWrite()
+                
+    // кладем все объекты класса погоды в хранилище
+                realm.add(vkUsers)
+                
+    // завершаем изменения хранилища
+                try realm.commitWrite()
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+        }
+
+    //сохранение фото в Realm
+        func saveVKPhotosData(_ vkPhotos: [VKPhotos]) {
+    // обработка исключений при работе с хранилищем
+            do {
+    // получаем доступ к хранилищу
+                let realm = try Realm()
+                
+    // начинаем изменять хранилище
+                realm.beginWrite()
+                
+    // кладем все объекты класса погоды в хранилище
+                realm.add(vkPhotos)
+                
+    // завершаем изменения хранилища
+                try realm.commitWrite()
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+        }
+    
+    //сохранение групп в Realm
+        func saveGroupsData(_ vkGroups: [VKGroup]) {
+    // обработка исключений при работе с хранилищем
+            do {
+    // получаем доступ к хранилищу
+                let realm = try Realm()
+                
+    // начинаем изменять хранилище
+                realm.beginWrite()
+                
+    // кладем все объекты класса погоды в хранилище
+                realm.add(vkGroups)
+                
+    // завершаем изменения хранилища
+                try realm.commitWrite()
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+        }
+
 }
