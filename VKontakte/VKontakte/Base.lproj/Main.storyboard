@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kle-Yy-itp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -135,7 +135,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ctx-Ni-Fuh">
             <objects>
-                <tabBarController id="Wcb-fp-Jz3" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="Wcb-fp-Jz3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="emM-OK-6Vk"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V3a-lU-Pt0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -301,6 +301,7 @@
                         </connections>
                     </collectionView>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="AMU-dj-aan"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wo2-ik-CEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -344,7 +345,7 @@
             <objects>
                 <tableViewController id="7Ae-hl-JM6" customClass="MyFriendsViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="V0c-UE-sbu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -432,7 +433,7 @@
                 <navigationController id="wFG-ht-fco" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="pj4-KT-azt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="89Q-HH-LWL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -543,7 +544,7 @@
                 <navigationController id="c7J-Yj-YLr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" id="QWd-1w-AOr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zhK-g0-lqZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -559,7 +560,7 @@
             <objects>
                 <tableViewController id="ZFC-9G-lbk" customClass="NewsViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="530" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jde-vF-Yig">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <sections/>
@@ -580,7 +581,7 @@
                 <navigationController id="q3j-dB-Fue" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Новости" id="HD7-Qz-q1y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AqH-YV-Hzz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -591,8 +592,73 @@
             </objects>
             <point key="canvasLocation" x="1612" y="-1963"/>
         </scene>
+        <!--Login Controller-->
+        <scene sceneID="7Kj-rP-sTW">
+            <objects>
+                <viewController id="Kle-Yy-itp" customClass="VKLoginController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YEm-o1-jDt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W63-jH-BNs">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="leading" secondItem="iJ1-Fu-Ddx" secondAttribute="leading" id="K6H-Aa-wil"/>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="top" secondItem="iJ1-Fu-Ddx" secondAttribute="top" id="NsF-rg-BDz"/>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="leading" secondItem="iJ1-Fu-Ddx" secondAttribute="leading" id="bQa-2h-PE3"/>
+                            <constraint firstItem="iJ1-Fu-Ddx" firstAttribute="bottom" secondItem="W63-jH-BNs" secondAttribute="bottom" id="feY-Vh-zFh"/>
+                            <constraint firstItem="W63-jH-BNs" firstAttribute="top" secondItem="iJ1-Fu-Ddx" secondAttribute="top" id="k0i-ZY-I6o"/>
+                            <constraint firstItem="iJ1-Fu-Ddx" firstAttribute="trailing" secondItem="W63-jH-BNs" secondAttribute="trailing" id="kUY-UH-28T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iJ1-Fu-Ddx"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="W63-jH-BNs" id="TiV-Yv-gvC"/>
+                        <segue destination="Wcb-fp-Jz3" kind="show" identifier="Run the App" id="2TN-Yj-67H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oI1-Wh-aMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88" y="-31"/>
+        </scene>
+        <!--Test Network View Controller-->
+        <scene sceneID="9Ac-Ip-UW6">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="HA5-Eh-h4h" customClass="TestNetworkViewController" customModule="VKontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7WE-cA-lai">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Запросы выполнены, смотреть в консоль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWU-R1-0Ep">
+                                <rect key="frame" x="41.5" y="442.5" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BWU-R1-0Ep" firstAttribute="centerY" secondItem="hEh-bR-dif" secondAttribute="centerY" id="7P8-91-Vqh"/>
+                            <constraint firstItem="BWU-R1-0Ep" firstAttribute="centerX" secondItem="hEh-bR-dif" secondAttribute="centerX" id="blc-zE-NT3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hEh-bR-dif"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ICG-dm-K48"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWD-WL-7NQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88" y="700"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SLF-Ow-QtP"/>
+        <segue reference="2TN-Yj-67H"/>
     </inferredMetricsTieBreakers>
 </document>
