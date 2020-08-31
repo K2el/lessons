@@ -129,6 +129,10 @@ class VKuser: Object, Codable {
         case online
         case trackCode = "track_code"
     }
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+
 }
 
 //---------------
@@ -193,6 +197,9 @@ class VKPhotos: Object, Codable {
         case hasTags = "has_tags"
         //case postID = "post_id"
         case sizes, text
+    }
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
 

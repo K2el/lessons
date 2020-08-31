@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import RealmSwift
 
 
 class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
@@ -15,6 +16,22 @@ class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
     var vkGroup: [VKGroup] = []
     
     var filtered: [VKGroup] = []
+    
+    func loadData() {
+            do {
+                let realm = try Realm()
+                
+                let groups = realm.objects(VKGroup.self)
+                
+
+                self.vkGroup = Array(groups)
+                self.filtered = Array(groups)
+                
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -45,10 +62,9 @@ class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
         
         //test.loadGroups(token: Session.shared.token)
         
-        test.loadGroups(token: Session.shared.token){ [weak self] vkGroup in
+        test.loadGroups(token: Session.shared.token){ [weak self] in
         // сохраняем полученные данные в массиве
-            self?.vkGroup = vkGroup
-            self?.filtered = vkGroup
+            self?.loadData()
             self?.tableView.reloadData()
         }
         

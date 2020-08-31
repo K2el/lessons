@@ -7,24 +7,42 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 class FriendsPhotoViewController: UICollectionViewController {
     
     var vkPhotos: [VKPhotos] = []
     
+    func loadData() {
+            do {
+                let realm = try Realm()
+                
+                let photos = realm.objects(VKPhotos.self).filter("ownerID = \(MyFriendsViewController.friendsId)")
+                
+                self.vkPhotos = Array(photos)
+                
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let test = NetworkService()
         
-        test.loadPhotos(userId: MyFriendsViewController.friendsId, token: Session.shared.token){ [weak self] vkPhotos in
+        test.loadPhotos(userId: MyFriendsViewController.friendsId, token: Session.shared.token){ [weak self] in
         // сохраняем полученные данные в массиве
-            self?.vkPhotos = vkPhotos
+            //self?.vkPhotos = vkPhotos
+            self?.loadData()
             self?.collectionView.reloadData()
         }
-        //print("id пользователя: \(MyFriendsViewController.friendsId)")
+        print("id пользователя: \(MyFriendsViewController.friendsId)")
     }
+    
+   
     
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

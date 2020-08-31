@@ -194,18 +194,16 @@
 				95D7677624B88697002EBA09 /* Friends */,
 				95D7677724B886C2002EBA09 /* Groups */,
 				9519873424C5B95800D1FDF6 /* News */,
-				952AA7B024ADE5C500C09F83 /* AppDelegate.swift */,
+				9551CAE424FCF91B0081D2E0 /* Network */,
 				9519874224E146C800D1FDF6 /* CustomUINavigationController.swift */,
+				952AA7B024ADE5C500C09F83 /* AppDelegate.swift */,
 				952AA7B224ADE5C500C09F83 /* SceneDelegate.swift */,
 				9519877124EADFB800D1FDF6 /* UIImageView.swift */,
 				9519873E24D43C5300D1FDF6 /* Test.swift */,
-				9519874424E153AD00D1FDF6 /* Session.swift */,
 				952AA7B424ADE5C500C09F83 /* LoginViewController.swift */,
 				9519874024DEAE6800D1FDF6 /* CustomSegue.swift */,
 				952AA7B624ADE5C500C09F83 /* Main.storyboard */,
 				95A893EF24BC54E4007F8F41 /* LikePhoto.swift */,
-				9519876F24E433B000D1FDF6 /* TestNetworkViewController.swift */,
-				9519874624E424C200D1FDF6 /* NetworkManager.swift */,
 				9519874824E4292D00D1FDF6 /* VKLoginController.swift */,
 				95A893ED24BB0CD5007F8F41 /* TestImageView.swift */,
 				952AA7B924ADE5C600C09F83 /* Assets.xcassets */,
@@ -231,6 +229,16 @@
 				952AA7D424ADE5C600C09F83 /* Info.plist */,
 			);
 			path = VKontakteUITests;
+			sourceTree = "<group>";
+		};
+		9551CAE424FCF91B0081D2E0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9519874424E153AD00D1FDF6 /* Session.swift */,
+				9519874624E424C200D1FDF6 /* NetworkManager.swift */,
+				9519876F24E433B000D1FDF6 /* TestNetworkViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		95D7677124B87FF9002EBA09 /* Model */ = {

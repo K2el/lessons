@@ -18,123 +18,9 @@ class NetworkService {
         let session = Alamofire.Session(configuration: configuration)
         return session
     }()
-    
-//    func simpleWeatherRequest() {
-//         //München
-//        guard let url = URL(string: "http://api.openweathermap.org/data/2.5/weather?q=Tomsk&appid=72d0c294c9e0f3370139ce5d00a6b575&units=metric") else { return }
-//        
-//        let session = URLSession.shared
-//        
-//        print(Thread.current)
-//        
-//        let dataTask = session.dataTask(with: url) { (data, response, error) in
-//            if let data = data {
-//                if let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) {
-//                    print(json)
-//                }
-//            } else if let error = error {
-//                print(error.localizedDescription)
-//            }
-//            print(Thread.current)
-//        }
-//        dataTask.resume()
-//    }
-    
-//    func advancedWeatherRequest() {
-//        // Custom session
-//        let configuration = URLSessionConfiguration.default
-//        let session =  URLSession(configuration: configuration)
-//
-//        var urlConstructor = URLComponents()
-//        urlConstructor.scheme = "http"
-//        urlConstructor.host = "api.openweathermap.org"
-//        urlConstructor.path = "/data/2.5/weather"
-//        urlConstructor.queryItems = [
-//            URLQueryItem(name: "q", value: "Tomsk"),
-//            URLQueryItem(name: "appid", value: "72d0c294c9e0f3370139ce5d00a6b575"),
-//            URLQueryItem(name: "units", value: "metric"),
-//        ]
-//
-//        guard let url = urlConstructor.url else { return }
-//
-//        let dataTask = session.dataTask(with: url) { (data, response, error) in
-//            if let data = data {
-//                if let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments) {
-//                    print(json)
-//                }
-//            } else if let error = error {
-//                print(error.localizedDescription)
-//            }
-//        }
-//        dataTask.resume()
-//    }
-    
-//    func postTemplateRequest() {
-//        let configuration = URLSessionConfiguration.default
-//        let session =  URLSession(configuration: configuration)
-//
-//        var urlConstructor = URLComponents()
-//        urlConstructor.scheme = "http"
-//        urlConstructor.host = "jsonplaceholder.typicode.com"
-//        urlConstructor.path = "/posts"
-//        urlConstructor.queryItems = [
-//            URLQueryItem(name: "title", value: "foo"),
-//            URLQueryItem(name: "body", value: "bar"),
-//            URLQueryItem(name: "userId", value: "1")
-//        ]
-//
-//        guard let url = urlConstructor.url else { return }
-//
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
-//        request.allowsCellularAccess = false
-//
-//        let dataTask = session.dataTask(with: request) { (data, response, error) in
-//            if let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) {
-//                print(json)
-//            }
-//        }
-//        dataTask.resume()
-//    }
-    
-//    func alamofireRequest() {
-//        AF.request("http://api.openweathermap.org/data/2.5/weather?q=Tomsk&appid=72d0c294c9e0f3370139ce5d00a6b575&units=metric").responseJSON { response in
-//            if let data = response.value {
-//                print(data)
-//            }
-//        }
-//    }
-    
-//    func alamofireAdvancedRequest() {
-//        let url = "http://api.openweathermap.org"
-//        let path = "/data/2.5/weather"
-//        let params = [
-//            "q": "Tomsk",
-//            "appid": "72d0c294c9e0f3370139ce5d00a6b575",
-//            "units": "metric",
-//        ]
-//
-//        AF.request(url + path, method: .get, parameters: params).responseJSON { response in
-//            if let data = response.value {
-//                print(data)
-//            }
-//        }
-//
-//        NetworkService.session.request(url + path, method: .get, parameters: params).response { response in
-//            switch response.result {
-//            case .success(let data):
-//                if let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments) {
-//                    print(json)
-//                }
-//
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
-//    }
-    
+ 
     //список групп
-    func loadGroups(token: String, completion: @escaping ([VKGroup]) -> Void) {
+    func loadGroups(token: String, completion: @escaping () -> Void) {
         let baseUrl = "https://api.vk.com"
         let path = "/method/groups.get"
         
@@ -154,9 +40,9 @@ class NetworkService {
                 let vkGroups = try JSONDecoder().decode(GroupCodable.self, from: data).response.items
                 
                 self.saveGroupsData(vkGroups)
-                completion(vkGroups)
+                completion()
                 
-                print("!!!! \(vkGroups)")
+               // print("!!!! \(vkGroups)")
                 
             } catch {
                 print(error)
@@ -167,7 +53,7 @@ class NetworkService {
     }
     
     //список друзей
-    func loadFriends(userId: Int, token: String, completion: @escaping ([VKuser]) -> Void) {
+    func loadFriends(userId: Int, token: String, completion: @escaping () -> Void) {
         let baseUrl = "https://api.vk.com"
         let path = "/method/friends.get"
         
@@ -185,7 +71,7 @@ class NetworkService {
             do {
                 let vkUsers = try JSONDecoder().decode(UserCodable.self, from: data).response.items
                 self.saveVKuserData(vkUsers)
-                completion(vkUsers)
+                completion()
                 //print("!!!! \(vkUsers)")
             } catch {
                 print(error)
@@ -197,7 +83,7 @@ class NetworkService {
     }
     
     //список фотографий
-    func loadPhotos(userId: Int, token: String, completion: @escaping ([VKPhotos]) -> Void) {
+    func loadPhotos(userId: Int, token: String, completion: @escaping () -> Void) {
         let baseUrl = "https://api.vk.com"
         let path = "/method/photos.get"
         
@@ -217,7 +103,7 @@ class NetworkService {
                 let vkPhotos = try JSONDecoder().decode(PhotosCodable.self, from: data).response.items
                 
                 self.saveVKPhotosData(vkPhotos)
-                completion(vkPhotos)
+                completion()
                 
                 //print("!!!! \(vkPhotos)")
             } catch {
@@ -259,16 +145,22 @@ class NetworkService {
     
     //сохранение пользователей в Realm
         func saveVKuserData(_ vkUsers: [VKuser]) {
+        
+        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        
     // обработка исключений при работе с хранилищем
             do {
     // получаем доступ к хранилищу
-                let realm = try Realm()
+                let realm = try Realm(configuration: config)
                 
+//                try realm.write {
+//                  realm.deleteAll()
+//                }
     // начинаем изменять хранилище
                 realm.beginWrite()
                 
     // кладем все объекты класса погоды в хранилище
-                realm.add(vkUsers)
+                realm.add(vkUsers, update: .all)
                 
     // завершаем изменения хранилища
                 try realm.commitWrite()
@@ -281,15 +173,19 @@ class NetworkService {
     //сохранение фото в Realm
         func saveVKPhotosData(_ vkPhotos: [VKPhotos]) {
     // обработка исключений при работе с хранилищем
+            let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
             do {
     // получаем доступ к хранилищу
-                let realm = try Realm()
+                let realm = try Realm(configuration: config)
                 
+//                try realm.write {
+//                  realm.deleteAll()
+//                }
     // начинаем изменять хранилище
                 realm.beginWrite()
                 
     // кладем все объекты класса погоды в хранилище
-                realm.add(vkPhotos)
+                realm.add(vkPhotos, update: .all)
                 
     // завершаем изменения хранилища
                 try realm.commitWrite()
@@ -301,16 +197,20 @@ class NetworkService {
     
     //сохранение групп в Realm
         func saveGroupsData(_ vkGroups: [VKGroup]) {
+             let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
     // обработка исключений при работе с хранилищем
             do {
     // получаем доступ к хранилищу
-                let realm = try Realm()
-                
+                let realm = try Realm(configuration: config)
+               
+//                try realm.write {
+//                  realm.deleteAll()
+//                }
     // начинаем изменять хранилище
                 realm.beginWrite()
                 
     // кладем все объекты класса погоды в хранилище
-                realm.add(vkGroups)
+                realm.add(vkGroups, update: .all)
                 
     // завершаем изменения хранилища
                 try realm.commitWrite()

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 
@@ -20,7 +21,20 @@ class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
     static var friendsId: Int = 0
 
 
-    
+    func loadData() {
+            do {
+                let realm = try Realm()
+                
+                let users = realm.objects(VKuser.self)
+                
+                self.vkUsers = Array(users)
+                self.sectionCharNew(self.vkUsers)
+                
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+    }
     private func sectionCharNew(_ users: [VKuser]) {
            var char: String
            myFriends = []
@@ -44,10 +58,11 @@ class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
         
         let test = NetworkService()
         
-        test.loadFriends(userId: Session.shared.userId, token: Session.shared.token){ [weak self] vkUsers in
+        test.loadFriends(userId: Session.shared.userId, token: Session.shared.token){ [weak self] in
         // сохраняем полученные данные в массиве
-            self?.vkUsers = vkUsers
-            self!.sectionCharNew(self!.vkUsers)
+            //self?.vkUsers = vkUsers
+            //self!.sectionCharNew(self!.vkUsers)
+            self?.loadData()
             self?.tableView.reloadData()
         }
         
@@ -109,6 +124,7 @@ class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             //print("нажата строка № \(indexPath.row) в секции \(indexPath.section)")
         MyFriendsViewController.friendsId = myFriends[indexPath.section][indexPath.row].id
+        print(MyFriendsViewController.friendsId)
         }
 
     
