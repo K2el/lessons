@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A22004B9-8B59-4B71-BAB0-026563BF2EA7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "VKontakte/Friends/MyFriendsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "sectionChar(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C9BDA10D-D04C-4E4C-8051-A78539738D3B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -30,10 +14,199 @@
             filePath = "VKontakte/Friends/MyFriendsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DAA14F38-B682-40F0-A615-016038455EDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKontakte/CustomUINavigationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "transitionDuration(using:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A08E167-35B9-47FF-8390-F0741179B600"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKontakte/CustomUINavigationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "CustomUINavigationController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "3A08E167-35B9-47FF-8390-F0741179B600 - a03e85df782c83b2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKontakte.CustomUINavigationController.init(navigationBarClass: Swift.Optional&lt;Swift.AnyObject.Type&gt;, toolbarClass: Swift.Optional&lt;Swift.AnyObject.Type&gt;) -&gt; VKontakte.CustomUINavigationController"
+                  moduleName = "VKontakte"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anna/Desktop/lesson/Swift/lessons/VKontakte/VKontakte/CustomUINavigationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "3A08E167-35B9-47FF-8390-F0741179B600 - 645bbeef61540eed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKontakte.CustomUINavigationController.init(rootViewController: __C.UIViewController) -&gt; VKontakte.CustomUINavigationController"
+                  moduleName = "VKontakte"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anna/Desktop/lesson/Swift/lessons/VKontakte/VKontakte/CustomUINavigationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "66">
+               </Location>
+               <Location
+                  uuid = "3A08E167-35B9-47FF-8390-F0741179B600 - 820ac5f5d843445"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKontakte.CustomUINavigationController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; VKontakte.CustomUINavigationController"
+                  moduleName = "VKontakte"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anna/Desktop/lesson/Swift/lessons/VKontakte/VKontakte/CustomUINavigationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "3A08E167-35B9-47FF-8390-F0741179B600 - 1ff060031da612a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKontakte.CustomUINavigationController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;VKontakte.CustomUINavigationController&gt;"
+                  moduleName = "VKontakte"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anna/Desktop/lesson/Swift/lessons/VKontakte/VKontakte/CustomUINavigationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57C4369B-7006-4800-BC3C-2DD88D1B2569"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKontakte/CustomUINavigationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "navigationController(_:animationControllerFor:from:to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFDFBA4D-327E-4B3D-8365-057A948C350C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKontakte/CustomUINavigationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "navigationController(_:animationControllerFor:from:to:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9829BB6B-6C2B-4538-B015-BD3F646A716B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKontakte/CustomUINavigationController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "PopAnimator"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9829BB6B-6C2B-4538-B015-BD3F646A716B - 98a5ecbfc08b1acb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKontakte.PopAnimator.__allocating_init() -&gt; VKontakte.PopAnimator"
+                  moduleName = "VKontakte"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anna/Desktop/lesson/Swift/lessons/VKontakte/VKontakte/CustomUINavigationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "9829BB6B-6C2B-4538-B015-BD3F646A716B - 999b24460f6be35f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKontakte.PopAnimator.__deallocating_deinit"
+                  moduleName = "VKontakte"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anna/Desktop/lesson/Swift/lessons/VKontakte/VKontakte/CustomUINavigationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9829BB6B-6C2B-4538-B015-BD3F646A716B - 98780615f8e9c027"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKontakte.PopAnimator.init() -&gt; VKontakte.PopAnimator"
+                  moduleName = "VKontakte"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anna/Desktop/lesson/Swift/lessons/VKontakte/VKontakte/CustomUINavigationController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "93">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
