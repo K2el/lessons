@@ -7,37 +7,85 @@
 //
 
 import UIKit
+import RealmSwift
 
 
 
 class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
-
+    
     
     var sections: [String] = []
-    var newMyFriends: [[User]] = []
+    var vkUsers: [VKuser] = []
+    var myFriends: [[VKuser]] = []
+    var filtered: [VKuser] = []
+    static var friendsId: Int = 0
+    var token: NotificationToken?
     
-    var filtered: [User] = []
-
     
-    private func sectionChar(_ users: [User]) {
+    func loadData() {
+        do {
+            let realm = try Realm()
+            
+            let users = realm.objects(VKuser.self)
+            
+            self.vkUsers = Array(users)
+            self.sectionCharNew(self.vkUsers)
+            
+            token = users.observe { [weak self] (changes: RealmCollectionChange) in
+                guard let tableView = self?.tableView else { return }
+                switch changes {
+                case .initial:
+                    tableView.reloadData()
+                case .update(_, let deletions, let insertions, let modifications):
+                    tableView.beginUpdates()
+                    tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
+                                         with: .automatic)
+                    tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
+                                         with: .automatic)
+                    tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                                         with: .automatic)
+                    tableView.endUpdates()
+                case .error(let error):
+                    fatalError("\(error)")
+                }
+            }
+            
+            
+        } catch {
+            // если произошла ошибка, выводим ее в консоль
+            print(error)
+        }
+    }
+    private func sectionCharNew(_ users: [VKuser]) {
         var char: String
-        newMyFriends = []
+        myFriends = []
         sections = []
+        //print(users)
         
         for user in users {
-            char = String(user.name.first!)
+            char = String(user.firstName.first!)
             if (sections.firstIndex(of: char) == nil) {
                 sections.append(char)
-                newMyFriends.append([user])
+                myFriends.append([user])
             } else {
-                newMyFriends[sections.firstIndex(of: char)!].append(user)
+                myFriends[sections.firstIndex(of: char)!].append(user)
             }
         }
+        //print(newMyFriendsNew)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sectionChar(myFriends)
+        
+        let test = NetworkService()
+        
+        test.loadFriends(userId: Session.shared.userId, token: Session.shared.token){ [weak self] in
+            
+            self?.loadData()
+            //self?.tableView.reloadData()
+            
+        }
+        
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         searchBar.delegate = self
         self.tableView.tableHeaderView = searchBar
@@ -46,41 +94,45 @@ class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchText != "" {
-            filtered = myFriends.filter({ (text) -> Bool in
-                let tmp:NSString = text.name as NSString
+            filtered = vkUsers.filter({ (text) -> Bool in
+                let tmp:NSString = "\(text.firstName) \(text.lastName)" as NSString
                 let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
                 return range.location != NSNotFound
             })
             //print(filtered)
-
-            sectionChar(filtered)
+            
+            sectionCharNew(filtered)
             
         } else {
-            sectionChar(myFriends)
+            sectionCharNew(vkUsers)
         }
         
         self.tableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newMyFriends[section].count
+        //return newMyFriends[section].count
+        return myFriends[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyFriendsCell", for: indexPath) as! MyFriendsCellView
         
-        cell.friendName.text = newMyFriends[indexPath.section][indexPath.row].name
-        cell.friendImage.image = newMyFriends[indexPath.section][indexPath.row].image
+        cell.friendName.text = "\(myFriends[indexPath.section][indexPath.row].firstName) \(myFriends[indexPath.section][indexPath.row].lastName)"
+        
+        cell.friendImage.sd_setImage(with: URL(string: myFriends[indexPath.section][indexPath.row].photo100))
+        //downloaded(from: myFriends[indexPath.section][indexPath.row].photo100)
+        
         cell.testImageView.configure()
         return cell
     }
@@ -90,11 +142,12 @@ class MyFriendsViewController: UITableViewController, UISearchBarDelegate {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            //print("нажата строка № \(indexPath.row) в секции \(indexPath.section)")
-            row = indexPath.row
-        }
-
+        //print("нажата строка № \(indexPath.row) в секции \(indexPath.section)")
+        MyFriendsViewController.friendsId = myFriends[indexPath.section][indexPath.row].id
+        print(MyFriendsViewController.friendsId)
+    }
     
-
+    
+    
 }
 
