@@ -7,16 +7,57 @@
 //
 
 import UIKit
+import SDWebImage
+import RealmSwift
 
 
 class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
     
-    var filtered: [Group] = myGroups
+    var vkGroup: [VKGroup] = []
+    var filtered: [VKGroup] = []
+    
+    
+    var token: NotificationToken?
+    
+    func loadData() {
+            do {
+                let realm = try Realm()
+                
+                let groups = realm.objects(VKGroup.self)
+                
+
+                self.vkGroup = Array(groups)
+                self.filtered = Array(groups)
+                
+                token = groups.observe { [weak self] (changes: RealmCollectionChange) in
+                    guard let tableView = self?.tableView else { return }
+                    switch changes {
+                    case .initial:
+                        tableView.reloadData()
+                    case .update(_, let deletions, let insertions, let modifications):
+                        tableView.beginUpdates()
+                        tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
+                                             with: .automatic)
+                        tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
+                                             with: .automatic)
+                        tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                                             with: .automatic)
+                        tableView.endUpdates()
+                    case .error(let error):
+                        fatalError("\(error)")
+                    }
+                }
+                
+            } catch {
+    // если произошла ошибка, выводим ее в консоль
+                print(error)
+            }
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         if searchText != "" {
-            filtered = myGroups.filter({ (text) -> Bool in
+            filtered = vkGroup.filter({ (text) -> Bool in
                 let tmp:NSString = text.name as NSString
                 let range = tmp.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
                 return range.location != NSNotFound
@@ -24,7 +65,7 @@ class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
             //print(filtered)
             
         } else {
-            filtered = myGroups
+            filtered = vkGroup
         }
         
         self.tableView.reloadData()
@@ -37,6 +78,17 @@ class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let test = NetworkService()
+        
+        //test.loadGroups(token: Session.shared.token)
+        
+        test.loadGroups(token: Session.shared.token){ [weak self] in
+        // сохраняем полученные данные в массиве
+            self?.loadData()
+           // self?.tableView.reloadData()
+        }
+        
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
         searchBar.delegate = self
         self.tableView.tableHeaderView = searchBar
@@ -52,8 +104,17 @@ class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! MyGroupsCellView
+        //cell.groupTextName.text = filtered[indexPath.row].name
+        //cell.groupImage.image = filtered[indexPath.row].image
+        
+        let image =  cell.groupImage
+        
+        //image!.downloaded(from: vkGroup[indexPath.row].photo50)
+        image!.sd_setImage(with: URL(string: filtered[indexPath.row].photo50))
+        
         cell.groupTextName.text = filtered[indexPath.row].name
-        cell.groupImage.image = filtered[indexPath.row].image
+        
+        
         cell.testImageView.configure()
         return cell
     }
@@ -64,10 +125,23 @@ class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         // Если была нажата кнопка «Удалить»
+//        if editingStyle == .delete {
+//            filtered.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        }
+        
+        let group = filtered[indexPath.item]
         if editingStyle == .delete {
-            filtered.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            do {
+                let realm = try Realm()
+                realm.beginWrite()
+                realm.delete(group)
+                try realm.commitWrite()
+            } catch {
+                print(error)
+            }
         }
+
     }
 
     @IBAction func addMyGroup(_ sender: Any) {
@@ -90,7 +164,7 @@ class MyGroupsViewController: UITableViewController, UISearchBarDelegate {
     
     private func addMyGroup(name: String) {
         guard !name.isEmpty else { return }
-        filtered.insert(Group(name, nil), at: 0)
+        //filtered.insert(VKGroup(name, nil), at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
         
     }
