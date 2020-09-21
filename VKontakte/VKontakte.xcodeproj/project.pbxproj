@@ -29,6 +29,7 @@
 		952AA7BD24ADE5C600C09F83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952AA7BB24ADE5C600C09F83 /* LaunchScreen.storyboard */; };
 		952AA7C824ADE5C600C09F83 /* VKontakteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7C724ADE5C600C09F83 /* VKontakteTests.swift */; };
 		952AA7D324ADE5C600C09F83 /* VKontakteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952AA7D224ADE5C600C09F83 /* VKontakteUITests.swift */; };
+		954C108A25063F4B00E2685A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 954C108925063F4B00E2685A /* GoogleService-Info.plist */; };
 		957CB1B824B764020094394E /* GlobalGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1B724B764020094394E /* GlobalGroupsViewController.swift */; };
 		957CB1BA24B764950094394E /* GlobalGroupsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1B924B764950094394E /* GlobalGroupsCellView.swift */; };
 		957CB1BC24B86DD10094394E /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */; };
@@ -95,6 +96,7 @@
 		952AA7CE24ADE5C600C09F83 /* VKontakteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKontakteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		952AA7D224ADE5C600C09F83 /* VKontakteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKontakteUITests.swift; sourceTree = "<group>"; };
 		952AA7D424ADE5C600C09F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954C108925063F4B00E2685A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		957CB1B724B764020094394E /* GlobalGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsViewController.swift; sourceTree = "<group>"; };
 		957CB1B924B764950094394E /* GlobalGroupsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsCellView.swift; sourceTree = "<group>"; };
 		957CB1BB24B86DD10094394E /* MyFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				9519873E24D43C5300D1FDF6 /* Test.swift */,
 				952AA7B424ADE5C500C09F83 /* LoginViewController.swift */,
 				9519874024DEAE6800D1FDF6 /* CustomSegue.swift */,
+				954C108925063F4B00E2685A /* GoogleService-Info.plist */,
 				952AA7B624ADE5C500C09F83 /* Main.storyboard */,
 				95A893EF24BC54E4007F8F41 /* LikePhoto.swift */,
 				9519874824E4292D00D1FDF6 /* VKLoginController.swift */,
@@ -395,6 +398,7 @@
 			files = (
 				952AA7BD24ADE5C600C09F83 /* LaunchScreen.storyboard in Resources */,
 				952AA7BA24ADE5C600C09F83 /* Assets.xcassets in Resources */,
+				954C108A25063F4B00E2685A /* GoogleService-Info.plist in Resources */,
 				9519873124C5B81000D1FDF6 /* NewsCell.xib in Resources */,
 				952AA7B824ADE5C500C09F83 /* Main.storyboard in Resources */,
 			);

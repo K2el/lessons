@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>336849485105-hba1a4csq517k05f83c2iic5bng83h22.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.336849485105-hba1a4csq517k05f83c2iic5bng83h22</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDeQR-zh9s-4_PBu0Yo9EBwXHqVuDPB8XM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>336849485105</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>artGK.VKontakte</string>
+	<key>PROJECT_ID</key>
+	<string>vkontakte-dad41</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vkontakte-dad41.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:336849485105:ios:27cf8050ad0082a919c410</string>
+	<key>DATABASE_URL</key>
+	<string>https://vkontakte-dad41.firebaseio.com</string>
+</dict>
+</plist>
